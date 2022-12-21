@@ -1,0 +1,3 @@
+var defaultConfig = {};
+
+export { defaultConfig };

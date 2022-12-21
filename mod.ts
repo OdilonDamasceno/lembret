@@ -2,8 +2,7 @@ import yargs from "yargs";
 import lembret from "./lembret.json" assert { type: "json" };
 const XDG_CONFIG: string = (Deno.env.get("HOME") || "") + "/.config/";
 
-import { config } from "core";
-import { defaultConfig } from "./defaultConfig.ts";
+import { defaultConfig } from "./config_default.ts";
 
 await import(XDG_CONFIG + "lembret/config.ts");
 
@@ -15,7 +14,7 @@ const main = function (args: string[]) {
     .strictCommands()
     .version(lembret.version)
     .parse();
-  console.log(Object.assign(defaultConfig, config));
+  console.log(Object.assign(defaultConfig, globalThis.config));
 };
 
 if (import.meta.main) main(Deno.args);

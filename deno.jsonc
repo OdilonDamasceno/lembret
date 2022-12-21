@@ -20,7 +20,8 @@
   ],
   "compilerOptions": {
     "types": [
-      "./types.ts"
+      "./types.ts",
+      "./global.d.ts"
     ]
   }
 }
