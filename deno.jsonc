@@ -1,0 +1,26 @@
+{
+  "importMap": "import_map.json",
+  "tasks": {
+    "run": "deno run --config=deno.jsonc --unstable -A mod.ts"
+  },
+  "lint": {
+    "rules": {
+      "exclude": [
+        "no-explicit-any",
+        "no-var"
+      ]
+    }
+  },
+  "lib": [
+    "dom",
+    "dom.iterable",
+    "dom.asynciterable",
+    "dom.extras",
+    "deno.ns"
+  ],
+  "compilerOptions": {
+    "types": [
+      "./types.ts"
+    ]
+  }
+}
